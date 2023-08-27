@@ -1,0 +1,165 @@
+.explore{
+    margin-left: 80px;
+    height: 711px;
+    width: 100%;
+    padding: 20px;
+}
+
+.explore h1{
+    font-size: 35px;
+    color: #fff;
+    opacity: 90%;
+}
+
+.explore-item{
+    display: flex;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.tab_box .tab_btn{
+    font-size: 18px;
+    font-weight: 600px;
+    color: #fff;
+    background: none;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+.tab_box{
+    position: relative;
+}
+
+/* .tab_box::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    margin-top: 6px;
+    width: 20%;
+    height: 3px;
+    background: #fff;
+    z-index: 1;
+} */
+
+.tab_box .tab_btn.active{
+    font-weight: 600;
+}
+
+.content{
+    margin-top: 20px;
+}
+
+.content_box .content.active{
+    display: block;
+}
+
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+
+.content_box .content h2{
+    margin: 10px 0;
+
+}
+
+.line{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 52px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.title-music{
+    width: 50%;
+    text-align: center;
+}
+
+.lyrics{
+    height: 100%;
+    max-height: 600px;
+    width: 100%;
+    max-width: 90%;
+    color: #fff;
+    margin-top: 30px;
+    overflow-x: scroll;
+    /* background-image: linear-gradient(
+        transparent 12%,
+        currentColor 30%,
+        currentColor 70%,
+        transparent 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed; */
+    -webkit-mask-image: linear-gradient(180deg,  rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+}
+
+.lyrics a{
+    text-decoration: none;
+    color: #fff;
+    cursor: default;
+    pointer-events: none;
+}
+
+.lyrics::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+    
+}
+
+.lyrics p{
+    width: 80%;
+    margin-bottom: 20px ;
+    text-align: left;
+}
+
+.content-box{
+    position: relative;
+}
+
+@media (max-width: 1200px){
+    .explore{
+        margin-left: 20px;
+    }
+    .explore h1{
+        font-size: 30px;
+    }
+    .lyrics p{
+        width: 100%;
+    }
+    .tab_box .tab_btn{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .content_box .content h2{
+        font-size: 23px;
+        margin: 10px 0;
+    }
+    .line{
+        width: 44px;
+    }
+
+    .title-music{
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px){
+    .line{
+        
+        top: 40px;
+    }
+}

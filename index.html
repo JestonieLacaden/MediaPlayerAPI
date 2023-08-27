@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player by Jestonie</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/3d8209e8e5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <audio src="" id="audio"></audio>
+
+        <div class="music-player">
+            <div class="album-pic">
+                <div class="artist"></div>
+            </div>
+            
+
+            <h1 class="music-name">Song Name</h1>
+            <p class="artist-name">artist</p>
+
+            <div class="song-slider">
+                <div class="time">
+                    <span class="current-time">00:00</span>
+                    <span class="song-duration">00:00</span>
+                </div>
+                <div class="main">
+                    <span class="bar"><span class="fill"></span></span>
+                    <input type="range" value="0" class="seek-bar" id="slider"/>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn backward-btn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="play-btn pause">
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn forward-btn"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+        </div>
+
+        <div class="explore">
+            <h1>Explore</h1>
+            <div class="explore-container">
+                <div class="explore-item tab_box">
+                    <button class="tab_btn active">Lyrics</button>
+                    <button class="tab_btn">Other Albums</button>
+                    <button class="tab_btn">Related Artists</button>
+                </div>
+                <div class="content_box">
+                    <div class="content lyrics active">
+                        <h2 class="title-music"></h2>
+                        <p class="lyrics-paragraph">
+                            
+                        </p>
+                    </div>
+                    <div class="content">
+                        <div class="content-other-album">
+                                <div class="albums">
+                                    <ul class="images" id="ul-album">
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-other-album">
+                                <div class="albums">
+                                    <ul class="images" id="ul-artists">
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script>
+</body>
+</html>
